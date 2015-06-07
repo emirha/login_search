@@ -1,0 +1,94 @@
+@import "bootstrap";
+@import "compass/utilities/general/clearfix";
+
+main {
+  @extend .container;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  max-width: 1100px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: #808080;
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 18px;
+  height: auto;
+  line-height: 20px;
+  padding: 6px 15px;
+}
+
+form {
+  &#login, &#register {
+    @include clearfix();
+    margin: auto;
+    width: 380px;
+    border: 1px solid #CCCCCC;
+    padding: 40px;
+  }
+
+  &#register {
+    width: 500px;
+  }
+
+  & > div {
+    @extend .form-group;
+  }
+
+  input[type=text] {
+    @extend .form-control;
+  }
+
+  input[type=submit] {
+    @extend .btn;
+    @extend .btn-default;
+    float: right;
+  }
+
+}
+
+nav {
+  @extend .navbar;
+  @extend .navbar-default;
+
+  & > div {
+    @extend .container-fluid;
+
+    & > div {
+      @extend .navbar-header;
+      @extend .container;
+      margin: auto;
+      float: none;
+    }
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  ul {
+    @extend .nav;
+    @extend .navbar-nav;
+    float : right;
+  }
+
+  form {
+    display: block;
+    float: right;
+    margin-top: 8px;
+  }
+}
+
+main {
+  table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-hover;
+  }
+}
